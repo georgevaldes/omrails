@@ -1,13 +1,19 @@
-<div class="hero-unit">
-	<h1>Welcome to Feather &amp; Mint</h1>
+<% if user_signed_in? %>
+	<h1>Prepare to get Feathered</h1>
 	<p>
-		You've found the home page for the 
-		<%= link_to "Feather & Mint", "http://onemonthrails.com" %> 
-		application!
-	</p>
-	<p>
-		<%= link_to "Sign Up Now!", "#", :class => "btn btn-large btn-primary" %>
-	</p>
-</div>
-
+		Welcome to the exclusive sign in page of Feather &amp; Mint.
+		We're so happy you're here! (^-^)! 
+<% else %>	
+	<div class="hero-unit">
+		<h1>Welcome to Feather &amp; Mint</h1>
+		<p>
+			You've found the home page for the 
+			<%= link_to "Feather & Mint", "http://onemonthrails.com" %> 
+			application!
+		</p>
+		<p>
+			<%= link_to "Sign Up Now!", new_user_registration_path, :class => "btn btn-large btn-primary" %>
+		</p>
+	</div>
+<% end %>
 
