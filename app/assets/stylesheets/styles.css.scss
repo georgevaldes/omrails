@@ -1,37 +1,65 @@
 /* You could change the font */
-/*$baseFontFamily: Oxygen;
-@import url(http://fonts.googleapis.com/css?family=Oxygen);*/
+$baseFontFamily: Oxygen;
+@import url(http://fonts.googleapis.com/css?family=Oxygen);
+@import url(http://fonts.googleapis.com/css?family=Quando);
+@import url(http://fonts.googleapis.com/css?family=Pathway+Gothic+One);
 
 $navbarBackgroundHighlight: white;
-$navbarBackground: white;
+/*$navbarBackground: #00ffae;*/
 $btnPrimaryBackground: green;
-$navbarHeight: 60px;
+$navbarHeight: 20px;
+
 
 
 @import 'bootstrap';
 
 body {
 	padding-top: 60px;
+	background-color:#000000;
+	color: $white;
 }
 
 @import 'bootstrap-responsive';
 
+.container .navbar {
+	background-color: #00ffae;
+}
+
+.navbar .brand {
+	font-family: 'Quando', serif;
+	font-size: 10px;
+}
+
 .navbar-inner {
 	@include box-shadow(none !important);
 	border: 0;
+	background-color: #00ffae;
 }
 
 .footer {
 	margin-top: 50px;
 	color: $grayLight;
 	a {
-		color: $gray;
+		color: $grayLight;
 	}
 }
 
 .container {
 	margin-left: auto;
 	margin-right: auto;
+	text-align:center;
+}
+
+.container h1 {
+	color: #00ffae;
+	text-align: center;
+	font-family:'Pathway Gothic One', sans-serif;
+	letter-spacing: 5px;
+	
+}
+
+.container h2 {
+	font-family:'Quando', serif;
 }
 
 .row {
@@ -40,12 +68,19 @@ body {
 
 .middle {
 	text-align: center;
+	font-family:'Pathway Gothic One', sans-serif;
+	letter-spacing: 5px;
+}
+
+.middle .span3 {
+	font-family:'Quando', serif;
+	letter-spacing: 0px;
 }
 
 #top_banner_container {
 width: 100%;
-height: 60.0em;
-background: #030200;
+height: 20.0em;
+background: #00ffae;
 background-image: url();
 background-repeat: no-repeat;
 background-position: center center;
@@ -64,8 +99,30 @@ margin: 0em auto;
 padding-top: 11.0em;
 }
 
+.map-container {
+margin-left:auto;
+margin-right:auto;
+padding-top: 30px;
+width: 680px;
+height: 300px;
+}
+
+#map {
+position: relative;
+left: 2px;
+top: 2px;
+width: 680px;
+height: 300px;
+z-index: 9;
+-webkit-box-shadow: 0 8px 6px -6px rgba(68,68,68,0.6);
+-moz-box-shadow: 0 8px 6px -6px rgba(68,68,68,0.6);
+box-shadow: 0 8px 6px -6px rgba(68,68,68,0.6);
+}
+
 .hero-unit h1 {
- color:white;
+ font-family:'Pathway Gothic One', sans-serif;
+ color: #00ffae;
+ letter-spacing: 5px;
 }
 
 .hero-unit p {
@@ -74,5 +131,49 @@ color: white;
 
 .hero-unit {
 	background-color: black;
+	text-align:center;
+}
+
+.middle h6 {
+	font-family:'Quando', serif;
+}
+
+.map {
+	position: absolute;
+	overflow: hidden;
+	width: 680px;
+	height: 300px;
+}
+
+.layer {
+  position: absolute;
+}
+
+.tile {
+  position: absolute;
+  width: 256px;
+  height: 256px;
+}
+
+.tile path {
+  fill: none;
+  stroke: #fff;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+
+.tile .major_road { stroke: #776; }
+.tile .minor_road { stroke: #ccb; }
+.tile .highway { stroke: #f39; stroke-width: 1.5px; }
+.tile .rail { stroke: #7de; }
+
+.info {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+
+#accordion h3 {
+	text-align:left;
 }
 

@@ -1,10 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Feather &amp; Mint</title>
+  <title>the design work of George Valdes</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+
+
+<link rel="stylesheet" href="css/customui.css" />
+  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+  <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.css" />
+ <!--[if lte IE 8]>
+     <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.ie.css" />
+ <![endif]-->
+ <script src="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.js"></script>  
+
+<script>
+  $(function() {
+    $( "#accordion" ).accordion();
+  });
+  </script>
+
 </head>
 <body>
 	<%= render 'layouts/header' %>
@@ -15,8 +32,9 @@
             <% end %>
 		<%= yield %>
 
-		<%= render 'layouts/footer' %>
+		
 	</div>
+	<%= render 'layouts/footer' %>
 	
 
 </body>
